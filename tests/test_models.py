@@ -15,13 +15,13 @@ class TestModels(unittest.TestCase):
         self.assertEqual(article.content, "Test Content")
         self.assertEqual(article.author_id, 1)
         self.assertEqual(article.magazine_id, 1)
-        self.assertIsNone(article.id)  # ID should be None until saved to the database
+        self.assertIsNone(article.id)  
 
     def test_magazine_creation(self):
-        magazine = Magazine("Tech Weekly", "Technology")  # Correct initialization
+        magazine = Magazine("Tech Weekly", "Technology")  
         self.assertEqual(magazine.name, "Tech Weekly")
         self.assertEqual(magazine.category, "Technology")
-        self.assertIsNone(magazine.id)  # ID should be None until saved to the database
+        self.assertIsNone(magazine.id)  
 
 if __name__ == "__main__":
     unittest.main()
